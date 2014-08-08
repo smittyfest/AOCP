@@ -5,5 +5,6 @@ def euclid(m, n):
 
 if __name__ == '__main__':
  print(euclid(27, 36))
+ print(euclid(119, 544))
 
 
