@@ -38,12 +38,26 @@ and call it Algorithm F.
 
 Solution: we can implement Algorithm F recursively, so that there are now variable substitutions as such:
 
-Algorithm F (Euclid's Algorithm). Given two positive integers m and n, find their greatest common divisor,
-that is, the largest positive integer that evenly divides both m and n.
+Algorithm F (Euclid's Algorithm-no variable substitutions). Given two positive integers m and n,
+find their greatest common divisor, that is, the largest positive integer that evenly divides both m and n.
 
 F1. [Is n zero?] If n = 0, the algorithm terminates; m is the answer.
 F2. [Recursive call] Call the algorithm with the values n and m % n directly instead of storing
 these values in separate variables.
 
+4. [16] What is the greatest common divisor of 2166 and 6099?
 
+Solution: Using Algorithm E (Euclid's Algorithm), we have
+
+m = 6099, n = 2166, r = 6099 % 2166 = 1767
+m = 2166, n = 1767, r = 2166 % 1767 = 399
+m = 1767, n = 399, r = 1767 % 399 = 171
+m = 399, n = 171, r = 399 % 171 = 57
+m = 171, n = 57, r = 171 % 57 = 0
+
+Thus, the greatest common divisor of 2166 and 6099 is 57.
+
+5. [12] Show that the "Procedure for Reading This Set of Books" that appears after the preface
+actually fails to be a genuine algorithm on at least three of our five counts!
+Also mention some differences in format between it and Algorithm E.
 
