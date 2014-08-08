@@ -1,0 +1,33 @@
+1. [10] The text showed how to interchange the values of variables m and n, using the replacement notation, by setting t ← m, m ← n, n ← t. Show how the values of four variables (a, b, c, d) can be rearranged to (b, c, d, a) by a sequence of replacements. In other words, the new value of a is to be the original value of b, etc. Try to use the minimum number of replacements.
+
+Solution: The procedure requires 8 operations, consisting of assigning the original values to four temporary variables, followed by the four value re-assignment operations:
+
+t ← a   # 1
+u ← b   # 2
+v ← c   # 3
+x ← d   # 4
+
+a ← u   # 5
+b ← v   # 6
+c ← x   # 7
+d ← t   # 8
+
+2. [15] Prove that m is always greater than n at the beginning of step E1, except possibly the first time this step occurs.
+
+Proof: Assume m and n are positive integers. In the case where the input value of m is less than the input value of n, the remainder r of m / n will simply be m, thus in step E3 the new value of m will be the original value of n, and the new value of n will be r, which is the original value of m. Thus the values of m and n swap in this case. 
+For each iteration forward, m / n will result in a remainder r that must be lessthan n.
+Using a proof by contradiction, assume the remainder r of m / n is greater than or equal to n: this would be impossible, because if this were the case, we could simply divide this remainder by n again and again until we reveal a remainder that is smaller than n.
+So knowing we will always be able to achieve a remainder r that is smaller than n when dividing m / n, we can show that in step E3, the new value of m will be the original value of n, while the new value of n will be this remainder value r,so we have m > n => n > r => m > n.
+Thus m is always greater than n at the beginning of step E1.
+
+3. [20] Change Euclid's Algorithm "Algorithm E" (for the sake of efficiency) so that all trivial replacement operations such as m ← n are avoided. Write this new algorithm in the style of Algorithm E, and call it Algorithm F.
+
+Solution: we can implement Algorithm F recursively, so that there are now variable substitutions as such:
+
+Algorithm F (Euclid's Algorithm). Given two positive integers m and n, find their greatest common divisor, that is, the largest positive integer that evenly divides both m and n.
+
+F1. [Is n zero?] If n = 0, the algorithm terminates; m is the answer.
+F2. [Recursive call] Call the algorithm with the values n and m % n directly instead of storing these values in separate variables.
+
+
+

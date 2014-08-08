@@ -10,15 +10,15 @@ we proceed as above.
 
 '''
 def euclid(m, n):
-  if m < 1 or n < 1:
-    print 'm and n must both be positive'
-  else:
-    while n:
-      m, n = n, m % n
-    return m
+    if m < 1 or n < 1:
+        print 'm and n must both be positive'
+    else:
+        while n:
+            m, n = n, m % n
+        return m
 
 if __name__ == '__main__':
- print(euclid(27, 36))
- print(euclid(119, 544))
+    print(euclid(27, 36))
+    print(euclid(119, 544))
 
 
