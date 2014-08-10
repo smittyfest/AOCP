@@ -132,3 +132,15 @@ step E1 getting executed an average of 2.6 times.
 7. [M21] Suppose that m is known and n is allowed to range over all positive
 integers; let Um be the average number of times that step E1 is executed in
 Algorithm E. Show that Um is well-defined. Is Um in any way related to Tm?
+
+Solution: I did not understand what Knuth meant by Tm here or how it might relate to Um, I even
+considered the possibility that Knuth might have meant Tn instead of Tm, but since Knuth checks
+are much sought after, I'm going to assume this isn't a typo. Knuth states in the back of the book
+that "In all but a finite number of cases, n > m." This makes sense, as m is fixed so there is only a
+finite range of integers 1..m where n < m. He goes on to state "And when n > m, the first iteration
+of Algorithm E merely exchanges these numbers;" This makes sense as well, as anytime m < n the
+algorithm will set m to the value of n and set n to the value of the remainder, which will be the 
+original value of m. Finally he adds "so Um = Tm + 1". So What we obtain from this is that Tm seems
+to stand for the average number of times step E1 is executed whenever m > n? Since anytime m < n we
+simply swap the values of m and n in step E3, this will in fact only add a single extra step to
+the number of times step E1 is executed, that total being Um.
