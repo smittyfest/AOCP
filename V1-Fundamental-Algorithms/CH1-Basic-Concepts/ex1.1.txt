@@ -96,6 +96,37 @@ of time. Since one could expect to take an indefinite amount of time to complete
 and also because many of the steps are ambiguous and subjective, this procedure lacks Effectiveness.
 
 
-6. m[20] What is T₅, the average number of times step E1 is performed when n = 5?
+6. [20] What is T₅, the average number of times step E1 is performed when n = 5?
 
-Solution:
+Solution: After the first execution of step E1 only the remainder of m after division by n is relevant. Since the remainder will always be less than n, and since n may divide m evenly with no remainder, we only need to check m for m = 1, m = 2, ..., m = n:
+
+m = 1, n = 5:
+E1(1) - 1 / 5 => m = 5, n = r = 1
+E1(2) - 5 / 1 => r = 0, return n = 1
+
+m = 2, n = 5:
+E1(1) - 2 / 5 => m = 5, n = r = 2
+E1(2) - 5 / 2 => m = 2, n = r = 1
+E1(3) - 2 / 1 => r = 0, return n = 1
+
+m = 3, n = 5:
+E1(1) - 3 / 5 => m = 5, n = r = 3
+E1(2) - 5 / 3 => m = 3, n = r = 2
+E1(3) - 3 / 2 => m = 2, n = r = 1
+E1(4) = 2 / 1 => r = 0, return n = 1
+
+m = 4, n = 5:
+E1(1) - 4 / 5 => m = 5, n = r = 4
+E1(2) - 5 / 4 => m = 4, n = r = 1
+E1(3) - 4 / 1 => r = 0, return n = 1
+
+m = 5, n = 5:
+E1(1) - 5 / 5 => r = 0, return n = 5 
+
+Thus step E1 is executed 13 times, so avaraging by n = 5 we get 13 / 5 equals
+step E1 getting executed an average of 2.6 times.
+
+
+7. [M21] Suppose that m is known and n is allowed to range over all positive
+integers; let Um be the average number of times that step E1 is executed in
+Algorithm E. Show that Um is well-defined. Is Um in any way related to Tm?
