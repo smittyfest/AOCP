@@ -98,7 +98,9 @@ and also because many of the steps are ambiguous and subjective, this procedure 
 
 6. [20] What is T₅, the average number of times step E1 is performed when n = 5?
 
-Solution: After the first execution of step E1 only the remainder of m after division by n is relevant. Since the remainder will always be less than n, and since n may divide m evenly with no remainder, we only need to check m for m = 1, m = 2, ..., m = n:
+Solution: After the first execution of step E1 only the remainder of m after division by n is relevant.
+Since the remainder will always be less than n, and since n may divide m evenly with no remainder, we only
+need to check m for m = 1, m = 2, ..., m = n:
 
 m = 1, n = 5:
 E1(1) - 1 / 5 => m = 5, n = r = 1
