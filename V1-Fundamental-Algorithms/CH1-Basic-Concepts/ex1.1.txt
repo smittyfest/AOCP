@@ -3,7 +3,7 @@ by setting t ← m, m ← n, n ← t. Show how the values of four variables (a, 
 to (b, c, d, a) by a sequence of replacements. In other words, the new value of a is to be the original
 value of b, etc. Try to use the minimum number of replacements.
 
-Solution: The procedure requires 8 operations, consisting of assigning the original values
+Solution: The naive procedure requires 8 operations, consisting of assigning the original values
 to four temporary variables, followed by the four value re-assignment operations:
 
 t ← a   # 1
@@ -16,6 +16,14 @@ b ← v   # 6
 c ← x   # 7
 d ← t   # 8
 
+We can improve upon this by realizing that we only need an auxiliary variable for storing a single existing
+value, resulting in a total of 5 operations:
+
+t ← a   # 1
+a ← b   # 2
+b ← c   # 3
+c ← d   # 4
+d ← a   # 5
 
 2. [15] Prove that m is always greater than n at the beginning of step E1, except possibly the first
 time this step occurs.
