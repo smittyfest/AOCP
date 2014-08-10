@@ -16,6 +16,7 @@ b ← v   # 6
 c ← x   # 7
 d ← t   # 8
 
+
 2. [15] Prove that m is always greater than n at the beginning of step E1, except possibly the first
 time this step occurs.
 
@@ -32,6 +33,7 @@ we can show that in step E3, the new value of m will be the original value of n,
 will be this remainder value r,so we have m > n => n > r => m > n.
 Thus m is always greater than n at the beginning of step E1.
 
+
 3. [20] Change Euclid's Algorithm "Algorithm E" (for the sake of efficiency) so that all trivial
 replacement operations such as m ← n are avoided. Write this new algorithm in the style of Algorithm E,
 and call it Algorithm F.
@@ -45,6 +47,7 @@ F1. [Is n zero?] If n = 0, the algorithm terminates; m is the answer.
 F2. [Recursive call] Call the algorithm with the values n and m % n directly instead of storing
 these values in separate variables.
 
+
 4. [16] What is the greatest common divisor of 2166 and 6099?
 
 Solution: Using Algorithm E (Euclid's Algorithm), we have
@@ -57,6 +60,7 @@ m = 171, n = 57, r = 171 % 57 = 0
 
 Thus, the greatest common divisor of 2166 and 6099 is 57.
 
+
 5. [12] Show that the "Procedure for Reading This Set of Books" that appears after the preface
 actually fails to be a genuine algorithm on at least three of our five counts!
 Also mention some differences in format between it and Algorithm E.
@@ -66,14 +70,23 @@ Solution: Of our five criteria for what constitutes a genuine algorithm
 Reading This Set of Books" fails to achieve Finiteness, Definiteness, Output,
 and Effectiveness.
 
-Finiteness - An algorithm must terminate in a finite number of steps. This procedure lacks finiteness because there is no clear terminating state, as the reader is told to proceed back to step 3 and re-read the book after they have finished reading and working through all of the exercises in the book. This loop iterates forever.
+Finiteness - An algorithm must terminate in a finite number of steps. This procedure lacks finiteness because
+there is no clear terminating state, as the reader is told to proceed back to step 3 and re-read the book after
+they have finished reading and working through all of the exercises in the book. This loop iterates forever.
 
-Definiteness - Each step of an algorithm must be precisely defined. This procedure lacks definiteness because several steps are ambiguous. Steps with language like "Is the subject of the chapter interesting to you?", "Are you mathematically inclined?", and "Relax" are not defined in a definite fashion.
+Definiteness - Each step of an algorithm must be precisely defined. This procedure lacks definiteness because
+several steps are ambiguous. Steps with language like "Is the subject of the chapter interesting to you?",
+"Are you mathematically inclined?", and "Relax" are not defined in a definite fashion.
 
-Output - An algorithm has one or more outputs, or quantities with a specified relation to the input. If we assume the book is the input, we would expect an algorithm to have a concrete set of output related in some way to the input. We could imagine the output being the benefits a reader may gain from studying the book, but this is highly subjective and open to interpretation. Therefore, this
-procedure does not have a clear output.
+Output - An algorithm has one or more outputs, or quantities with a specified relation to the input.
+If we assume the book is the input, we would expect an algorithm to have a concrete set of output related in some
+way to the input. We could imagine the output being the benefits a reader may gain from studying the book,
+but this is highly subjective and open to interpretation. Therefore, this procedure does not have a clear output.
 
-Effectiveness - Each step of an algorithm is expected to be performed in an exact fashion in a finite period of time. Since one could expect to take an indefinite amount of time to complete their study of this book, and also because many of the steps are ambiguous and subjective, this procedure lacks Effectiveness.
+Effectiveness - Each step of an algorithm is expected to be performed in an exact fashion in a finite period
+of time. Since one could expect to take an indefinite amount of time to complete their study of this book,
+and also because many of the steps are ambiguous and subjective, this procedure lacks Effectiveness.
+
 
 6. m[20] What is T₅, the average number of times step E1 is performed when n = 5?
 
