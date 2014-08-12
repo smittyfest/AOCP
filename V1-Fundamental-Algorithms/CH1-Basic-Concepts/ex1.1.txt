@@ -46,13 +46,20 @@ Thus m is always greater than n at the beginning of step E1.
 replacement operations such as m ← n are avoided. Write this new algorithm in the style of Algorithm E,
 and call it Algorithm F.
 
-Solution: we can implement Algorithm F recursively, so that there are now variable substitutions as such:
+Solution: We can eliminate all replacement operations by saving the remainder in the m and n variables:
 
 Algorithm F (Euclid's Algorithm-no variable substitutions). Given two positive integers m and n,
 find their greatest common divisor, that is, the largest positive integer that evenly divides both m and n.
 
+F1. [Remainder of m / n] Divide m by n and store the remainder in m
+F2. [Is m zero?] If m = 0, this algorithm terminates and returns the value of n
+F3. [Remainder of n / m] Divide n by m and store the remainder in n
+F4. [Is n zero?] If n = 0, this algorithm terminates and returns the value of m, otherwist go to step F1.
+
+As another option, we can implement Algorithm F as a recursive function, so that there are no variable substitutions:
+
 F1. [Is n zero?] If n = 0, the algorithm terminates; m is the answer.
-F2. [Recursive call] Call the algorithm with the values n and m % n directly instead of storing
+F2. [Recursive function call] Call the algorithm with the values n and m % n directly instead of storing
 these values in separate variables.
 
 
