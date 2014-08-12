@@ -54,13 +54,13 @@ find their greatest common divisor, that is, the largest positive integer that e
 F1. [Remainder of m / n] Divide m by n and store the remainder in m
 F2. [Is m zero?] If m = 0, this algorithm terminates and returns the value of n
 F3. [Remainder of n / m] Divide n by m and store the remainder in n
-F4. [Is n zero?] If n = 0, this algorithm terminates and returns the value of m, otherwist go to step F1.
+F4. [Is n zero?] If n = 0, this algorithm terminates and returns the value of m, otherwist go to step F1. ▮
 
 As another option, we can implement Algorithm F as a recursive function, so that there are no variable substitutions:
 
 F1. [Is n zero?] If n = 0, the algorithm terminates; m is the answer.
 F2. [Recursive function call] Call the algorithm with the values n and m % n directly instead of storing
-these values in separate variables.
+these values in separate variables. ▮
 
 
 4. [16] What is the greatest common divisor of 2166 and 6099?
