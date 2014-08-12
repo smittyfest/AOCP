@@ -181,4 +181,4 @@ for 0 <= j < N, where N is a nonnegative integer:
 ⨍((σ,j)) = (σ, aj) if θj does not occur in σ,
 
 
-9. [M30]
+9. [M30] Suppose that
