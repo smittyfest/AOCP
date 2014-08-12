@@ -179,3 +179,6 @@ Let ⨍ be a function of the following type, defined by the strings θj, ϕj and
 for 0 <= j < N, where N is a nonnegative integer:
 
 ⨍((σ,j)) = (σ, aj) if θj does not occur in σ,
+
+
+9. [M30]
