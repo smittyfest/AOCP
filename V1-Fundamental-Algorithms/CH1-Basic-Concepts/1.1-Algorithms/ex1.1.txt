@@ -178,7 +178,17 @@ gcd = 3
 Let ⨍ be a function of the following type, defined by the strings θj, ϕj and the integers aj, bj
 for 0 <= j < N, where N is a nonnegative integer:
 
-⨍((σ,j)) = (σ, aj) if θj does not occur in σ,
+⨍((σ,j)) = (σ,aj) let σ = a^mb^n (this is our input string).
+
+We let the remainder r ← |m - n|, so we let
+
+θj = a^|m-n|b^|m-n|
+
+and finally, we let ϕj = θ
+
+If |m-n| = 0, then aj = bj = 1 = N.
+
+Otherwise aj = bj = 0.
 
 
 9. [M30] Suppose that C1 = {Q1, I1, Ω1, ⨍1} and C2 = {Q2, I2, Ω2, ⨍2} are computational methods.
