@@ -175,6 +175,8 @@ Solution: As an example of the string representation of Algorithm E, let m = 30 
 
 gcd = 3
 
+Let our alphabet A = {a, b}.
+
 Let ⨍ be a function of the following type, defined by the strings θj, ϕj and the integers aj, bj
 for 0 <= j < N, where N is a nonnegative integer:
 
