@@ -1,1 +1,18 @@
-1.
+1. [05] Explain how to modify the idea of proof by mathematical induction, in case we want to prove some statement P(n)
+for all nonnegative integers -- that is, for n = 0, 1, 2, ... instead of for n = 1, 2, 3, ...
+
+Solution: We can modify Algorithm I (Construct a proof by mathematical induction) by altering the steps as such:
+
+New steps:
+
+a) Give a proof that P(0) is true.
+b) Give a proof that "if all of P(0), P(1), ..., P(n) are true, then P(n+1) is also true"; this proof should be valid
+for any integer n >= 0.
+
+I1. [Prove P(0).] Set k ← 0, and, according to (a), output a proof of P(0).
+I2. [k = n?] If k = n, terminate the algorithm; the required proof has been output.
+I3. [Prove P(k+1).] According to (b), output a proof that "If all of P(0), ..., P(k) are true, then P(k+1) is true."
+Also output "We have already proven P(0), ..., P(k); hence P(k+1) is true."
+I4. [Increase k.] Increase k by 1 and go to step I2. ▮
+
+2. [15]
