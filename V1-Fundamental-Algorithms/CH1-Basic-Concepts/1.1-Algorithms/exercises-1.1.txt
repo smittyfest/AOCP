@@ -31,7 +31,7 @@ time this step occurs.
 Proof: Assume m and n are positive integers. In the case where the input value of m is less than the
 input value of n, the remainder r of m / n will simply be m, thus in step E3 the new value of m will be
 the original value of n, and the new value of n will be r, which is the original value of m.
-Thus the values of m and n swap in this case. 
+Thus the values of m and n swap in this case.
 For each iteration forward, m / n will result in a remainder r that must be lessthan n.
 Using a proof by contradiction, assume the remainder r of m / n is greater than or equal to n:
 this would be impossible, because if this were the case, we could simply divide this remainder
@@ -130,7 +130,7 @@ E1(2) - 5 / 4 => m = 4, n = r = 1
 E1(3) - 4 / 1 => r = 0, return n = 1
 
 m = 5, n = 5:
-E1(1) - 5 / 5 => r = 0, return n = 5 
+E1(1) - 5 / 5 => r = 0, return n = 5
 
 Thus step E1 is executed 13 times, so avaraging by n = 5 we get 13 / 5 equals
 step E1 getting executed an average of 2.6 times.
@@ -146,7 +146,7 @@ are much sought after, I'm going to assume this isn't a typo. Knuth states in th
 that "In all but a finite number of cases, n > m." This makes sense, as m is fixed so there is only a
 finite range of integers 1..m where n < m. He goes on to state "And when n > m, the first iteration
 of Algorithm E merely exchanges these numbers;" This makes sense as well, as anytime m < n the
-algorithm will set m to the value of n and set n to the value of the remainder, which will be the 
+algorithm will set m to the value of n and set n to the value of the remainder, which will be the
 original value of m. Finally he adds "so Um = Tm + 1". So What we obtain from this is that Tm seems
 to stand for the average number of times step E1 is executed whenever m > n? Since anytime m < n we
 simply swap the values of m and n in step E3, this will in fact only add a single extra step to
