@@ -1,4 +1,10 @@
 *.idea
 *.project
 *.pyc
-bin/*
+*.iml
+*/.project
+*/.classpath
+.metadata
+.idea
+*/.idea
+
