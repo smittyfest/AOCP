@@ -205,3 +205,5 @@ simulates C1." This is to mean intuitively that any computation sequence of C1 i
 C2, except that C2 might take more steps in which to do the computation and it might retain
 more information in its states. (We thereby obtain a rigorous interpretation of the statement,
 "Program X is an implementation of Algorithm Y.")
+
+Solution: ["Rigorous Proof" goes here.]
